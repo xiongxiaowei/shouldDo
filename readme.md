@@ -33,3 +33,38 @@ this.http.get('person.json').map(res=>res.json())
 ```
 ### FormControl 
 每一个input元素都是一个formControl，每一个formControl都有一个valueChanges事件
+### @Input（）
+### @Output（）
+### @HostListener() 定义原生事件,也可以改名
+```
+@HostListener('mouseenter') onMouseEnter() {
+    this.highlight('yellow');
+  }
+```
+### Injectable() 自定义ts如guard需手动引入方可注入其他模块
+### providers数组,里面放服务和guard，依赖注入的核心，找到后自动实例化
+### imports[] 引入模块
+如使用响应式form表单，就必须引入ReactiveFormsModule 否则就会报错
+```
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpModule
+  ],
+```
+
+### declarations数组 注册组件，模板即可使用eg:app-home
+```
+ declarations: [
+    AppComponent,
+    TestComponent,
+    RangeComponent,
+    FromComponent,
+    EventComponent,
+    EmitComponent,
+    PromiseComponent,
+    Promise1Component,
+    AbmComponent
+  ],
+```
